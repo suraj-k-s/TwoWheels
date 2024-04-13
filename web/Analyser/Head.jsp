@@ -25,13 +25,13 @@
         <title>Home Page</title>
         <%@include file="SessionValidator.jsp" %>
         <!-- Styles -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+<!--        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
               rel="stylesheet">
         <link href="../modify/css/bootstrap.css" rel="stylesheet">
         <link href="../modify/css/fontawesome-all.css" rel="stylesheet">
         <link href="../modify/css/swiper.css" rel="stylesheet">
         <link href="../modify/css/magnific-popup.css" rel="stylesheet">
-        <link href="../modify/css/styles.css" rel="stylesheet">
+        <link href="../modify/css/styles.css" rel="stylesheet">-->
 
         <!-- Favicon  -->
         <link rel="icon" href="images/favicon.png">

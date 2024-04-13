@@ -1,127 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="en">
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
     <head>
+        <!-- meta data -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- SEO Meta Tags -->
-        <meta name="description"
-              content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-        <meta name="author" content="Inovatik">
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-        <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-        <meta property="og:site_name" content="" /> <!-- website name -->
-        <meta property="og:site" content="" /> <!-- website link -->
-        <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
-        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-        <meta property="og:type" content="article" />
+		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Two ..</title>
 
-        <!-- Website Title -->
-        <title>Home Page</title>
-        <%@include file="SessionValidator.jsp" %>
-        <!-- Styles -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
-              rel="stylesheet">
-        <link href="../modify/css/bootstrap.css" rel="stylesheet">
-        <link href="../modify/css/fontawesome-all.css" rel="stylesheet">
-        <link href="../modify/css/swiper.css" rel="stylesheet">
-        <link href="../modify/css/magnific-popup.css" rel="stylesheet">
-        <link href="../modify/css/styles.css" rel="stylesheet">
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="../Assets/Template/Main/assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="../Assets/Template/Main/assets/css/font-awesome.min.css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link href="../modify/slide/css/vendor/bootstrap.css" rel="stylesheet" />
-        <link href="../modify/slide/css/vendor/font-awesome.css" rel="stylesheet" />
-        <link href="../modify/slide/css/vendor/slick.css" rel="stylesheet" />
-        <link href="../modify/slide/css/vendor/slick-theme.css" rel="stylesheet" />
-        <link href="../modify/slide/css/vendor/odometer-theme-default.css" rel="stylesheet" />
-        <link href="../modify/slide/css/main.css" rel="stylesheet" />
-        <!-- Favicon  -->
-        <link rel="icon" href="images/favicon.png">
+        <!--linear icon css-->
+		<link rel="stylesheet" href="../Assets/Template/Main/assets/css/linearicons.css">
+
+        <!--flaticon.css-->
+		<link rel="stylesheet" href="../Assets/Template/Main/assets/css/flaticon.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="../Assets/Template/Main/assets/css/animate.css">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="../Assets/Template/Main/assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../Assets/Template/Main/assets/css/owl.theme.default.min.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="../Assets/Template/Main/assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="../Assets/Template/Main/assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="../Assets/Template/Main/assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="../Assets/Template/Main/assets/css/responsive.css">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
     </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" height="120 px">
-            <div class="container">
+	
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+	
+		<!--welcome-hero start -->
+		<section id="home" class="welcome-hero">
 
-                <!-- Text Logo - Use this if you don't have a graphic logo -->
-                <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+			<!-- top-area Start -->
+			<div class="top-area">
+				<div class="header-area">
+					<!-- Start Navigation -->
+				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="40" data-minus-value-mobile="55" data-speed="100">
 
-                <!-- Image Logo -->
-                <a class="navbar-brand logo-image" href=""><img src="../Assets/logo/images.png" alt="alternative"></a>
+				        <div class="container">
 
-                <!-- Mobile Menu Toggle Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-awesome fas fa-bars"></span>
-                    <span class="navbar-toggler-awesome fas fa-times"></span>
-                </button>
-                <!-- end of mobile menu toggle button -->
+				            <!-- Start Header Navigation -->
+				            <div class="navbar-header">
+				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+				                    <i class="fa fa-bars"></i>
+				                </button>
+				                <a class="navbar-brand" href="homepage.jsp">Two Wheels<span></span></a>
 
-                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="sendcomp.jsp">COMPLAINTS<span
-                                    class="sr-only">(current)</span></a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="vehrequests.jsp">your requests</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="sendfeed.jsp">FEEDBACK</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="Vreply.jsp">View reply</a>
-                        </li>
-                        <!-- Dropdown Menu -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown"
-                               role="button" aria-haspopup="true" aria-expanded="false">DETAILS</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href=""><span class="item-text">ARTICLE
-                                        DETAILS</span></a>
-                                <div class="dropdown-items-divide-hr"></div>
-                                <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS
-                                        CONDITIONS</span></a>
-                                <div class="dropdown-items-divide-hr"></div>
-                                <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY
-                                        POLICY</span></a>
-                            </div>
-                        </li>
-                        <!-- end of dropdown menu -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown"
-                               role="button" aria-haspopup="true" aria-expanded="false">PROFILE</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="Myprofile.jsp"><span class="item-text">MY PROFILE
-                                    </span></a>
-                                <div class="dropdown-items-divide-hr"></div>
-                                <a class="dropdown-item" href="Editprofile.jsp"><span class="item-text">EDIT PROFILE
-                                    </span></a>
+				            </div><!--/.navbar-header-->
+				            <!-- End Header Navigation -->
 
-                            </div>
-                        </li>
-                    </ul>
-                    <span class="nav-item">
-                        <a class="btn-outline-sm" href="../Guest/Login.jsp">LOG OUT</a>
-                    </span>
-                </div>
-            </div> <!-- end of container -->
-        </nav> <!-- end of navbar -->
-        <!-- end of navigation -->
+				            <!-- Collect the nav links, forms, and other content for toggling -->
+				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+				                    <li class=" scroll active"><a href="#home">home</a></li>
+				                    <li class="scroll"><a href="viewveh.jsp">Used Bikes</a></li>
+				                    <li class="scroll"><a href="viewveh.jsp">New Bikes</a></li>
+				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
+				                    <li class="scroll"><a href="#brand">brands</a></li>
+				                    <li class="scroll"><a href="#contact">contact</a></li>
+				                </ul><!--/.nav -->
+				            </div><!-- /.navbar-collapse -->
+				        </div><!--/.container-->
+				    </nav><!--/nav-->
+				    <!-- End Navigation -->
+				</div><!--/.header-area-->
+			    <div class="clearfix"></div>
 
-        <!-- Header -->
-        <header id="header" class="ex-header" style="height: 120px;">
-            <div class="container" style="margin-top: -6%;text-align: center;">
-                <div class="row">
-                    <div class="col-md-12" style="width: 900px;">
-                        <h1 style="padding:0">Two Wheels</h1>
-
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </header>
+			</div><!-- /.top-area-->
+			<!-- top-area End -->

@@ -78,7 +78,7 @@
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brand" href="index.html">Two Wheels<span></span></a>
+				                <a class="navbar-brand" href="index.html">carvilla<span></span></a>
 
 				            </div><!--/.navbar-header-->
 				            <!-- End Header Navigation -->
@@ -86,12 +86,12 @@
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scroll active"><a href="#home">Home</a></li>
-				                    <li class="scroll"><a href="#service">Service</a></li>
-                                                    <li><a href="viewveh.jsp">New Bikes</a></li>
-				                    <li><a href="payment.jsp">Used Bikes</a></li>
-				                    <li class="scroll"><a href="#brand">Brands</a></li>
-				                    <li class="scroll"><a href="#contact">Contact</a></li>
+				                    <li class=" scroll active"><a href="#home">home</a></li>
+				                    <li class="scroll"><a href="#service">service</a></li>
+				                    <li class="scroll"><a href="#featured-cars">featured cars</a></li>
+				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
+				                    <li class="scroll"><a href="#brand">brands</a></li>
+				                    <li class="scroll"><a href="#contact">contact</a></li>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
@@ -105,9 +105,9 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>Explore our wide selection of quality used bikes at prices that make every journey irresistible</h2>
+					<h2>get your desired car in resonable price</h2>
 					<p>
-						Find your perfect two-wheeled companion
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
 					</p>
 					<button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
 				</div>

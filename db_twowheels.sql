@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2024 at 12:38 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Apr 13, 2024 at 01:51 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `tbl_admin` (
   `admin_id` int(10) UNSIGNED NOT NULL,
   `admin_username` varchar(50) NOT NULL,
   `admin_password` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_admin`
@@ -58,7 +58,7 @@ CREATE TABLE `tbl_analyser` (
   `analyser_status` varchar(50) NOT NULL DEFAULT '0',
   `analyser_password` varchar(50) NOT NULL,
   `analyser_doj` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -69,7 +69,7 @@ CREATE TABLE `tbl_analyser` (
 CREATE TABLE `tbl_brand` (
   `brand_id` int(10) UNSIGNED NOT NULL,
   `brand_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_brand`
@@ -97,7 +97,17 @@ CREATE TABLE `tbl_chat` (
   `from_seller_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `to_seller_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `chat_content` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_chat`
+--
+
+INSERT INTO `tbl_chat` (`chat_id`, `chat_date`, `from_user_id`, `to_user_id`, `from_seller_id`, `to_seller_id`, `chat_content`) VALUES
+(13, 'April 12 2024, 04:56 PM', '1', 0, 0, 2, 'HI'),
+(14, 'April 12 2024, 04:56 PM', '1', 0, 0, 2, 'HI'),
+(15, 'April 12 2024, 04:56 PM', '1', 0, 0, 2, ''),
+(16, 'April 12 2024, 04:58 PM', '1', 0, 0, 2, 'I WANT BIKE');
 
 -- --------------------------------------------------------
 
@@ -115,7 +125,7 @@ CREATE TABLE `tbl_complaint` (
   `complaint_reply` varchar(50) DEFAULT 'Not Yet Replied',
   `complaint_status` varchar(50) NOT NULL DEFAULT '0',
   `reply_date` varchar(50) NOT NULL DEFAULT '---'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -126,7 +136,7 @@ CREATE TABLE `tbl_complaint` (
 CREATE TABLE `tbl_displacement` (
   `displacement_id` int(10) UNSIGNED NOT NULL,
   `displacement_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_displacement`
@@ -149,7 +159,7 @@ INSERT INTO `tbl_displacement` (`displacement_id`, `displacement_name`) VALUES
 CREATE TABLE `tbl_district` (
   `district_id` int(10) UNSIGNED NOT NULL,
   `district_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_district`
@@ -184,7 +194,7 @@ CREATE TABLE `tbl_feedback` (
   `seller_id` varchar(50) NOT NULL DEFAULT '0',
   `analyser_id` varchar(50) NOT NULL DEFAULT '0',
   `feedback_date` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -209,7 +219,7 @@ CREATE TABLE `tbl_newvehicle` (
   `brand_id` varchar(50) NOT NULL,
   `vehicle_date` varchar(50) NOT NULL,
   `vehicle_mileage` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_newvehicle`
@@ -233,7 +243,14 @@ CREATE TABLE `tbl_payment` (
   `payment_date` varchar(50) NOT NULL DEFAULT '0',
   `payment_amount` varchar(50) NOT NULL DEFAULT '0',
   `request_date` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_payment`
+--
+
+INSERT INTO `tbl_payment` (`payment_id`, `user_id`, `vehicle_id`, `payment_status`, `request_status`, `payment_date`, `payment_amount`, `request_date`) VALUES
+(21, '1', '8', '1', '0', '2024-04-12', '75000', '2024-04-12');
 
 -- --------------------------------------------------------
 
@@ -245,7 +262,7 @@ CREATE TABLE `tbl_place` (
   `place_id` int(10) UNSIGNED NOT NULL,
   `place_name` varchar(50) NOT NULL,
   `district_id` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_place`
@@ -283,7 +300,7 @@ CREATE TABLE `tbl_rating` (
   `user_name` varchar(50) DEFAULT NULL,
   `vehicle_id` varchar(50) NOT NULL,
   `rating_date` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -298,7 +315,7 @@ CREATE TABLE `tbl_review` (
   `review_date` varchar(50) NOT NULL,
   `review_caption` varchar(50) NOT NULL DEFAULT 'REVIEW',
   `vehicle_id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -318,7 +335,14 @@ CREATE TABLE `tbl_seller` (
   `seller_status` varchar(50) NOT NULL DEFAULT '0',
   `seller_doj` varchar(50) NOT NULL,
   `seller_password` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_seller`
+--
+
+INSERT INTO `tbl_seller` (`seller_id`, `seller_name`, `seller_contact`, `seller_email`, `seller_address`, `seller_photo`, `seller_proof`, `place_id`, `seller_status`, `seller_doj`, `seller_password`) VALUES
+(2, 'Midlaj', '9080706050', 'midlaj75@gmail.com', 'Kalathiparambil', '', '', '8', '1', '', '123');
 
 -- --------------------------------------------------------
 
@@ -329,7 +353,7 @@ CREATE TABLE `tbl_seller` (
 CREATE TABLE `tbl_type` (
   `type_id` int(10) UNSIGNED NOT NULL,
   `type_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_type`
@@ -361,7 +385,14 @@ CREATE TABLE `tbl_usedvehicle` (
   `vehicle_year` varchar(50) NOT NULL,
   `vehicle_audometer` varchar(50) NOT NULL,
   `seller_id` int(30) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_usedvehicle`
+--
+
+INSERT INTO `tbl_usedvehicle` (`vehicle_id`, `vehicle_name`, `type_id`, `displacement_id`, `brand_id`, `vehicle_photo`, `vehicle_rc`, `vehicle_status`, `vehicle_date`, `vehicle_price`, `vehicle_year`, `vehicle_audometer`, `seller_id`) VALUES
+(8, 'ACTIVA', '10', '14', '11', 'photo_1909.jpg', 'rc_1770.jpg', '0', '2024-04-12', '75000', '2018', '12000', 2);
 
 -- --------------------------------------------------------
 
@@ -381,7 +412,14 @@ CREATE TABLE `tbl_user` (
   `user_doj` varchar(50) NOT NULL,
   `user_password` varchar(50) NOT NULL,
   `user_status` varchar(50) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`user_id`, `user_name`, `user_contact`, `user_email`, `user_address`, `place_id`, `user_photo`, `user_proof`, `user_doj`, `user_password`, `user_status`) VALUES
+(1, 'Anagha', '9080706050', 'anagha@gmail.com', 'Madathiparambil H', '2', '', '', '', '123', '1');
 
 -- --------------------------------------------------------
 
@@ -395,7 +433,7 @@ CREATE TABLE `tbl_vg` (
   `usedvehicle_id` varchar(50) NOT NULL DEFAULT '0',
   `newvehicle_id` varchar(50) NOT NULL DEFAULT '0',
   `vg_image` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -535,7 +573,7 @@ ALTER TABLE `tbl_brand`
 -- AUTO_INCREMENT for table `tbl_chat`
 --
 ALTER TABLE `tbl_chat`
-  MODIFY `chat_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `chat_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_complaint`
@@ -571,7 +609,7 @@ ALTER TABLE `tbl_newvehicle`
 -- AUTO_INCREMENT for table `tbl_payment`
 --
 ALTER TABLE `tbl_payment`
-  MODIFY `payment_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `payment_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_place`
@@ -607,7 +645,7 @@ ALTER TABLE `tbl_type`
 -- AUTO_INCREMENT for table `tbl_usedvehicle`
 --
 ALTER TABLE `tbl_usedvehicle`
-  MODIFY `vehicle_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `vehicle_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`

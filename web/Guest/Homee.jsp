@@ -13,5 +13,8 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <%@include file="../modify/Head.jsp"%>
+        
     </body>
+    <%@include file="../modify/Foot.jsp"%>
 </html>

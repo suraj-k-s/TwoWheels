@@ -121,7 +121,7 @@
         <!-- end of navigation -->
 
         <!-- Header -->
-                            <header id="header" class="ex-header" style="height: 120px;">
+                            <header id="header" class="ex-header" style="height: 80px;">
                                 <div class="container" style="margin-top: -6%;text-align: center;">
                                     <div class="row">
                                         <div class="col-md-12" style="width: 900px;">
